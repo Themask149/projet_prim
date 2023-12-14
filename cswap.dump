@@ -1,0 +1,35 @@
+Dump of assembler code for function FP_F25519_cswap:
+   0x08008248 <+0>:	70 b5	push	{r4, r5, r6, lr}
+   0x0800824a <+2>:	0c 46	mov	r4, r1
+   0x0800824c <+4>:	06 46	mov	r6, r0
+   0x0800824e <+6>:	15 46	mov	r5, r2
+   0x08008250 <+8>:	f9 f7 f0 f8	bl	0x8001434 <BIG_256_29_cswap>
+   0x08008254 <+12>:	71 6a	ldr	r1, [r6, #36]	; 0x24
+   0x08008256 <+14>:	63 6a	ldr	r3, [r4, #36]	; 0x24
+   0x08008258 <+16>:	6d 42	negs	r5, r5
+   0x0800825a <+18>:	81 ea 03 02	eor.w	r2, r1, r3
+   0x0800825e <+22>:	2a 40	ands	r2, r5
+   0x08008260 <+24>:	51 40	eors	r1, r2
+   0x08008262 <+26>:	71 62	str	r1, [r6, #36]	; 0x24
+   0x08008264 <+28>:	63 6a	ldr	r3, [r4, #36]	; 0x24
+   0x08008266 <+30>:	5a 40	eors	r2, r3
+   0x08008268 <+32>:	62 62	str	r2, [r4, #36]	; 0x24
+   0x0800826a <+34>:	70 bd	pop	{r4, r5, r6, pc}
+End of assembler dump.
+
+
+void FP_F25519_cswap(int* r0, int* r1, int r2) {
+    int r4 = *r1;
+    int r6 = *r0;
+    int r5 = r2;
+    BIG_256_29_cswap(&r6, &r4, &r5);
+    int r1_val = *(r0 + 9);
+    int r3_val = *(r1 + 9);
+    r5 = -r5;
+    int r2_val = r1_val ^ r3_val;
+    r2_val &= r5;
+    int r1_new = r2_val ^ r1_val;
+    *(r0 + 9) = r1_new;
+    int r3_new = r2_val ^ r3_val;
+    *(r1 + 9) = r3_new;
+}

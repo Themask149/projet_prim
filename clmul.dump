@@ -1,0 +1,183 @@
+Dump of assembler code for function ECP_C25519_clmul:
+   0x08007f44 <+0>:	2d e9 f0 41	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
+   0x08007f48 <+4>:	da b0	sub	sp, #360	; 0x168
+   0x08007f4a <+6>:	06 46	mov	r6, r0
+   0x08007f4c <+8>:	01 a8	add	r0, sp, #4
+   0x08007f4e <+10>:	88 46	mov	r8, r1
+   0x08007f50 <+12>:	fa f7 96 f8	bl	0x8002080 <BIG_256_29_or>
+   0x08007f54 <+16>:	01 a8	add	r0, sp, #4
+   0x08007f56 <+18>:	fc f7 11 f8	bl	0x8003f7c <BIG_256_29_nbits>
+   0x08007f5a <+22>:	06 f1 28 07	add.w	r7, r6, #40	; 0x28
+   0x08007f5e <+26>:	05 46	mov	r5, r0
+   0x08007f60 <+28>:	38 46	mov	r0, r7
+   0x08007f62 <+30>:	00 f0 1f fa	bl	0x80083a4 <FP_F25519_iszilch>
+   0x08007f66 <+34>:	10 b1	cbz	r0, 0x8007f6e <ECP_C25519_clmul+42>
+   0x08007f68 <+36>:	5a b0	add	sp, #360	; 0x168
+   0x08007f6a <+38>:	bd e8 f0 81	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+   0x08007f6e <+42>:	40 46	mov	r0, r8
+   0x08007f70 <+44>:	f9 f7 be f9	bl	0x80012f0 <BIG_256_29_iszilch>
+   0x08007f74 <+48>:	00 28	cmp	r0, #0
+   0x08007f76 <+50>:	7b d1	bne.n	0x8008070 <ECP_C25519_clmul+300>
+   0x08007f78 <+52>:	31 46	mov	r1, r6
+   0x08007f7a <+54>:	1e a8	add	r0, sp, #120	; 0x78
+   0x08007f7c <+56>:	00 f0 44 f9	bl	0x8008208 <FP_F25519_copy>
+   0x08007f80 <+60>:	39 46	mov	r1, r7
+   0x08007f82 <+62>:	28 a8	add	r0, sp, #160	; 0xa0
+   0x08007f84 <+64>:	00 f0 40 f9	bl	0x8008208 <FP_F25519_copy>
+   0x08007f88 <+68>:	31 46	mov	r1, r6
+   0x08007f8a <+70>:	32 a8	add	r0, sp, #200	; 0xc8
+   0x08007f8c <+72>:	00 f0 3c f9	bl	0x8008208 <FP_F25519_copy>
+   0x08007f90 <+76>:	39 46	mov	r1, r7
+   0x08007f92 <+78>:	3c a8	add	r0, sp, #240	; 0xf0
+   0x08007f94 <+80>:	00 f0 38 f9	bl	0x8008208 <FP_F25519_copy>
+   0x08007f98 <+84>:	32 a8	add	r0, sp, #200	; 0xc8
+   0x08007f9a <+86>:	ff f7 3f ff	bl	0x8007e1c <ECP_C25519_dbl>
+   0x08007f9e <+90>:	31 46	mov	r1, r6
+   0x08007fa0 <+92>:	46 a8	add	r0, sp, #280	; 0x118
+   0x08007fa2 <+94>:	00 f0 31 f9	bl	0x8008208 <FP_F25519_copy>
+   0x08007fa6 <+98>:	50 a8	add	r0, sp, #320	; 0x140
+   0x08007fa8 <+100>:	39 46	mov	r1, r7
+   0x08007faa <+102>:	00 f0 2d f9	bl	0x8008208 <FP_F25519_copy>
+   0x08007fae <+106>:	50 a8	add	r0, sp, #320	; 0x140
+   0x08007fb0 <+108>:	00 f0 f8 f9	bl	0x80083a4 <FP_F25519_iszilch>
+   0x08007fb4 <+112>:	00 28	cmp	r0, #0
+   0x08007fb6 <+114>:	40 d0	beq.n	0x800803a <ECP_C25519_clmul+246>
+   0x08007fb8 <+116>:	02 3d	subs	r5, #2
+   0x08007fba <+118>:	33 d4	bmi.n	0x8008024 <ECP_C25519_clmul+224>
+   0x08007fbc <+120>:	29 46	mov	r1, r5
+   0x08007fbe <+122>:	40 46	mov	r0, r8
+   0x08007fc0 <+124>:	fd f7 28 fd	bl	0x8005a14 <BIG_256_29_bit>
+   0x08007fc4 <+128>:	32 a9	add	r1, sp, #200	; 0xc8
+   0x08007fc6 <+130>:	04 46	mov	r4, r0
+   0x08007fc8 <+132>:	30 46	mov	r0, r6
+   0x08007fca <+134>:	00 f0 1d f9	bl	0x8008208 <FP_F25519_copy>
+   0x08007fce <+138>:	3c a9	add	r1, sp, #240	; 0xf0
+   0x08007fd0 <+140>:	38 46	mov	r0, r7
+   0x08007fd2 <+142>:	00 f0 19 f9	bl	0x8008208 <FP_F25519_copy>
+   0x08007fd6 <+146>:	46 aa	add	r2, sp, #280	; 0x118
+   0x08007fd8 <+148>:	1e a9	add	r1, sp, #120	; 0x78
+   0x08007fda <+150>:	30 46	mov	r0, r6
+   0x08007fdc <+152>:	ff f7 5e ff	bl	0x8007e9c <ECP_C25519_add>
+   0x08007fe0 <+156>:	22 46	mov	r2, r4
+   0x08007fe2 <+158>:	32 a9	add	r1, sp, #200	; 0xc8
+   0x08007fe4 <+160>:	1e a8	add	r0, sp, #120	; 0x78
+   0x08007fe6 <+162>:	00 f0 2f f9	bl	0x8008248 <FP_F25519_cswap>
+   0x08007fea <+166>:	22 46	mov	r2, r4
+   0x08007fec <+168>:	3c a9	add	r1, sp, #240	; 0xf0
+   0x08007fee <+170>:	28 a8	add	r0, sp, #160	; 0xa0
+   0x08007ff0 <+172>:	00 f0 2a f9	bl	0x8008248 <FP_F25519_cswap>
+   0x08007ff4 <+176>:	31 46	mov	r1, r6
+   0x08007ff6 <+178>:	32 a8	add	r0, sp, #200	; 0xc8
+   0x08007ff8 <+180>:	00 f0 06 f9	bl	0x8008208 <FP_F25519_copy>
+   0x08007ffc <+184>:	39 46	mov	r1, r7
+   0x08007ffe <+186>:	3c a8	add	r0, sp, #240	; 0xf0
+   0x08008000 <+188>:	00 f0 02 f9	bl	0x8008208 <FP_F25519_copy>
+   0x08008004 <+192>:	1e a8	add	r0, sp, #120	; 0x78
+   0x08008006 <+194>:	ff f7 09 ff	bl	0x8007e1c <ECP_C25519_dbl>
+   0x0800800a <+198>:	22 46	mov	r2, r4
+   0x0800800c <+200>:	32 a9	add	r1, sp, #200	; 0xc8
+   0x0800800e <+202>:	1e a8	add	r0, sp, #120	; 0x78
+   0x08008010 <+204>:	00 f0 1a f9	bl	0x8008248 <FP_F25519_cswap>
+   0x08008014 <+208>:	01 3d	subs	r5, #1
+   0x08008016 <+210>:	22 46	mov	r2, r4
+   0x08008018 <+212>:	3c a9	add	r1, sp, #240	; 0xf0
+   0x0800801a <+214>:	28 a8	add	r0, sp, #160	; 0xa0
+   0x0800801c <+216>:	00 f0 14 f9	bl	0x8008248 <FP_F25519_cswap>
+   0x08008020 <+220>:	6b 1c	adds	r3, r5, #1
+   0x08008022 <+222>:	cb d1	bne.n	0x8007fbc <ECP_C25519_clmul+120>
+   0x08008024 <+224>:	1e a9	add	r1, sp, #120	; 0x78
+   0x08008026 <+226>:	30 46	mov	r0, r6
+   0x08008028 <+228>:	00 f0 ee f8	bl	0x8008208 <FP_F25519_copy>
+   0x0800802c <+232>:	28 a9	add	r1, sp, #160	; 0xa0
+   0x0800802e <+234>:	38 46	mov	r0, r7
+   0x08008030 <+236>:	00 f0 ea f8	bl	0x8008208 <FP_F25519_copy>
+   0x08008034 <+240>:	5a b0	add	sp, #360	; 0x168
+   0x08008036 <+242>:	bd e8 f0 81	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+   0x0800803a <+246>:	0a a8	add	r0, sp, #40	; 0x28
+   0x0800803c <+248>:	01 f0 cc fb	bl	0x80097d8 <FP_F25519_one>
+   0x08008040 <+252>:	0a a9	add	r1, sp, #40	; 0x28
+   0x08008042 <+254>:	50 a8	add	r0, sp, #320	; 0x140
+   0x08008044 <+256>:	00 f0 da f9	bl	0x80083fc <FP_F25519_equals>
+   0x08008048 <+260>:	00 28	cmp	r0, #0
+   0x0800804a <+262>:	b5 d1	bne.n	0x8007fb8 <ECP_C25519_clmul+116>
+   0x0800804c <+264>:	02 46	mov	r2, r0
+   0x0800804e <+266>:	50 a9	add	r1, sp, #320	; 0x140
+   0x08008050 <+268>:	14 a8	add	r0, sp, #80	; 0x50
+   0x08008052 <+270>:	01 f0 11 f9	bl	0x8009278 <FP_F25519_inv>
+   0x08008056 <+274>:	46 a9	add	r1, sp, #280	; 0x118
+   0x08008058 <+276>:	08 46	mov	r0, r1
+   0x0800805a <+278>:	14 aa	add	r2, sp, #80	; 0x50
+   0x0800805c <+280>:	00 f0 fc f9	bl	0x8008458 <FP_F25519_mul>
+   0x08008060 <+284>:	46 a8	add	r0, sp, #280	; 0x118
+   0x08008062 <+286>:	00 f0 3f f9	bl	0x80082e4 <FP_F25519_reduce>
+   0x08008066 <+290>:	0a a9	add	r1, sp, #40	; 0x28
+   0x08008068 <+292>:	50 a8	add	r0, sp, #320	; 0x140
+   0x0800806a <+294>:	00 f0 cd f8	bl	0x8008208 <FP_F25519_copy>
+   0x0800806e <+298>:	a3 e7	b.n	0x8007fb8 <ECP_C25519_clmul+116>
+   0x08008070 <+300>:	30 46	mov	r0, r6
+   0x08008072 <+302>:	00 f0 09 f9	bl	0x8008288 <FP_F25519_zero>
+   0x08008076 <+306>:	38 46	mov	r0, r7
+   0x08008078 <+308>:	00 f0 06 f9	bl	0x8008288 <FP_F25519_zero>
+   0x0800807c <+312>:	5a b0	add	sp, #360	; 0x168
+   0x0800807e <+314>:	bd e8 f0 81	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
+End of assembler dump.
+
+
+void ECP_C25519_clmul(BIG_256_29 r, BIG_256_29 a, BIG_256_29 b)
+{
+    BIG_256_29 t1, t2, t3, t4;
+    FP_F25519_copy(t1, a);
+    FP_F25519_copy(t2, b);
+    FP_F25519_zero(r);
+    FP_F25519_zero(t3);
+    FP_F25519_zero(t4);
+
+    while (!FP_F25519_iszilch(t2))
+    {
+        if (BIG_256_29_bit(t2, 0) == 1)
+        {
+            FP_F25519_copy(t3, t1);
+            FP_F25519_copy(t4, t2);
+            FP_F25519_cswap(t1, t3, BIG_256_29_bit(t1, 0) ^ BIG_256_29_bit(t2, 0));
+            FP_F25519_cswap(t2, t4, BIG_256_29_bit(t1, 0) ^ BIG_256_29_bit(t2, 0));
+            FP_F25519_copy(t3, t1);
+            FP_F25519_copy(t4, t2);
+            FP_F25519_add(t1, t3, t4);
+            FP_F25519_copy(t3, t1);
+            FP_F25519_copy(t4, t2);
+            FP_F25519_dbl(t1);
+            FP_F25519_add(t2, t3, t4);
+        }
+        else
+        {
+            FP_F25519_copy(t3, t1);
+            FP_F25519_copy(t4, t2);
+            FP_F25519_cswap(t1, t3, BIG_256_29_bit(t1, 0) ^ BIG_256_29_bit(t2, 0));
+            FP_F25519_cswap(t2, t4, BIG_256_29_bit(t1, 0) ^ BIG_256_29_bit(t2, 0));
+            FP_F25519_copy(t3, t1);
+            FP_F25519_copy(t4, t2);
+            FP_F25519_add(t1, t3, t4);
+            FP_F25519_copy(t3, t1);
+            FP_F25519_copy(t4, t2);
+            FP_F25519_dbl(t1);
+            FP_F25519_add(t2, t3, t4);
+        }
+        BIG_256_29_shr(t2, 1);
+    }
+
+    FP_F25519_one(t3);
+    FP_F25519_equals(t4, r);
+    if (FP_F25519_equals(t3, t4))
+    {
+        FP_F25519_inv(t3, t3);
+        FP_F25519_mul(t4, t3, t1);
+        FP_F25519_reduce(t4);
+        FP_F25519_copy(r, t4);
+    }
+    else
+    {
+        FP_F25519_zero(r);
+    }
+}
+
+
