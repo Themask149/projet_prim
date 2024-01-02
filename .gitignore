@@ -3,3 +3,6 @@ objdir/
 anraud/
 test
 core/
+libecc/
+wolfssl/
+wolfssl_core/
