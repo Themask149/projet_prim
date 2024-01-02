@@ -2,7 +2,7 @@
 # PROJECT DESCRIPTION
 #
 
-TARGET = ecc
+TARGET = ecc_wolfssl
 
 SRCS += configure.c
 #changer sources
