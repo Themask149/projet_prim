@@ -1,7 +1,11 @@
 #include <libecc/libec.h>
 
+extern void init_SYSCLK();
+extern void init_Cortex();
 
 int main(void){
+    init_SYSCLK();
+    init_Cortex();
     ec_str_params *ec_str_params;
     ec_curve_type ec_type;
     ec_params curve_params;

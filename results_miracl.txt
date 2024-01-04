@@ -22,3 +22,74 @@ Le nombre de valeur unique est 5
 Voici les valeurs uniques5071256
 
  Le nombre de valeur unique est 1
+
+
+Pour la fonction ECP_C25519_mul :
+Voici les valeurs uniques 5071256
+
+Le nombre de valeur unique est 1
+
+Pour la fonction BIG_256_29_or :
+Voici les valeurs uniques 237
+
+Le nombre de valeur unique est 1
+
+Pour la fonction BIG_256_29_nbits :
+Voici les valeurs uniques 263
+
+Le nombre de valeur unique est 1
+
+Pour la fonction FP_F25519_iszilch :
+Voici les valeurs uniques 566
+
+Le nombre de valeur unique est 1
+
+Pour la fonction BIG_256_29_iszilch :
+Voici les valeurs uniques 39
+
+Le nombre de valeur unique est 1
+
+Pour la fonction FP_F25519_copy N°1:
+Voici les valeurs uniques 66
+
+Le nombre de valeur unique est 1
+
+Pour la fonction FP_F25519_copy N°2:
+Voici les valeurs uniques 66
+
+Le nombre de valeur unique est 1
+
+Pour la fonction ECP_C25519_dbl :
+Voici les valeurs uniques 8718
+
+Le nombre de valeur unique est 1
+
+Pour la fonction BIG_256_29_bit :
+Voici les valeurs uniques 39
+
+Le nombre de valeur unique est 1
+
+Pour la fonction ECP_C25519_add :
+Voici les valeurs uniques 9655
+
+Le nombre de valeur unique est 1
+
+Pour la fonction FP_F25519_cswap n°1:
+Voici les valeurs uniques 325
+
+Le nombre de valeur unique est 1
+
+Pour la fonction FP_F25519_cswap n°2:
+Voici les valeurs uniques 244
+
+Le nombre de valeur unique est 1
+
+Pour la fonction FP_F25519_one :
+Voici les valeurs uniques 1563
+
+Le nombre de valeur unique est 1
+
+Pour la fonction FP_F25519_equals :
+Voici les valeurs uniques 986
+
+Le nombre de valeur unique est 1
