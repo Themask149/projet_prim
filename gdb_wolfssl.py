@@ -29,9 +29,9 @@ class MyCommand(gdb.Command):
         t = time.time()
         print("random_multiply invoke")
         #Ici on met les breakpoints pour la fonction que l'on veut tester
-        gdb.execute("b *main+76")
-        gdb.execute("b *main+80")
-        gdb.execute("b *main+46")
+        gdb.execute("b *main+84")
+        gdb.execute("b *main+88")
+        gdb.execute("b *main+54")
         token=secrets.token_hex(32)
         for j in range(32):
             gdb.execute("set (byte) aes_key["+str(j)+"]=0x"+token[2*j:2*j+2])
@@ -48,6 +48,7 @@ class MyCommand(gdb.Command):
         gdb.execute("continue")
         for i in range(nbloop):
             print("")
+            gdb.execute("p/a in")
             gdb.execute("set *(int*)("+address_cyccnt+")=0")
             gdb.execute("continue")
             res = int.from_bytes(gdb.selected_inferior().read_memory(int(address_cyccnt, 16), 4).tobytes(), 'little')

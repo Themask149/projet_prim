@@ -37,7 +37,6 @@ int main(void){
     if (ret!=0){
         for(;;){}
     };
-    in[0]=1;
     for (int i =0;i<nbtest;i++){
         //pseudo aleatoire in
         ret=wc_AesCbcEncrypt(&aes, in, in, sizeof(in));
