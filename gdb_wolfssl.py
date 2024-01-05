@@ -29,8 +29,8 @@ class MyCommand(gdb.Command):
         t = time.time()
         print("random_multiply invoke")
         #Ici on met les breakpoints pour la fonction que l'on veut tester
-        gdb.execute("b *main+84")
-        gdb.execute("b *main+88")
+        gdb.execute("b *curve25519+354")
+        gdb.execute("b *curve25519+358")
         gdb.execute("b *main+54")
         token=secrets.token_hex(32)
         for j in range(32):
@@ -63,7 +63,7 @@ MyCommand()
 def save_results():
 
     with open("results_wolfssl.txt",'a') as f:
-        f.write("\n\nPour la fonction curve25519:")
+        f.write("\n\nPour la fonction fe_cswap ter:")
         # json.dump(cycle_tab, f)
         f.write("\nVoici les valeurs uniques ")
         uniquetab=np.unique(cycle_tab)

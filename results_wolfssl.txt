@@ -1,0 +1,138 @@
+
+
+Pour la fonction curve25519:
+Voici les valeurs uniques 2513881
+
+Le nombre de valeur unique est 1
+
+Pour la fonction memset:
+Voici les valeurs uniques 2513557
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_frombytes:
+Voici les valeurs uniques 481
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_frombytes:
+Voici les valeurs uniques 481
+
+Le nombre de valeur unique est 1
+
+
+Pour la fonction fe_0:
+Voici les valeurs uniques 26
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_copy:
+Voici les valeurs uniques 62
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_1 bis:
+Voici les valeurs uniques 25
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_cswap:
+Voici les valeurs uniques 259
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_cswap bis:
+Voici les valeurs uniques 215
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_sub:
+Voici les valeurs uniques 99
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_sub bis:
+Voici les valeurs uniques 92
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_add:
+Voici les valeurs uniques 103
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_add bis:
+Voici les valeurs uniques 92
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_mul:
+Voici les valeurs uniques 1018
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_mul bis:
+Voici les valeurs uniques 1018
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_sq bis:
+Voici les valeurs uniques 492
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_add ter:
+Voici les valeurs uniques 103
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_sub ter:
+Voici les valeurs uniques 99
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_mul ter:
+Voici les valeurs uniques 1018
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_sub 4:
+Voici les valeurs uniques 99
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_sub ter:
+Voici les valeurs uniques 640
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_mul121666:
+Voici les valeurs uniques 281
+286
+
+Le nombre de valeur unique est 2
+
+Pour la fonction fe_sq 4:
+Voici les valeurs uniques 640
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_sq 4:
+Voici les valeurs uniques 640
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_add 4:
+Voici les valeurs uniques 103
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_mul 4:
+Voici les valeurs uniques 1018
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_cswap ter:
+Voici les valeurs uniques 259
+
+Le nombre de valeur unique est 1
