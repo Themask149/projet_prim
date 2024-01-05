@@ -136,3 +136,68 @@ Pour la fonction fe_cswap ter:
 Voici les valeurs uniques 259
 
 Le nombre de valeur unique est 1
+
+Pour la fonction fe_cswap 4:
+Voici les valeurs uniques 215
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_invert:
+Voici les valeurs uniques 140644
+
+Le nombre de valeur unique est 1
+
+Pour la boucle:
+Voici les valeurs uniques 9277
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_mul 5:
+Voici les valeurs uniques 1018
+
+Le nombre de valeur unique est 1
+
+Pour la fonction fe_tobytes:
+Voici les valeurs uniques 238
+
+Le nombre de valeur unique est 1
+
+Pour la fonction memset:
+Voici les valeurs uniques 291
+
+Le nombre de valeur unique est 1
+
+Pour la fonction memset bis:
+Voici les valeurs uniques 287
+
+Le nombre de valeur unique est 1
+
+Pour la fonction memset ter:
+Voici les valeurs uniques 287
+
+Le nombre de valeur unique est 1
+
+Pour la fonction memset 4:
+Voici les valeurs uniques 287
+
+Le nombre de valeur unique est 1
+
+Pour la fonction memset 5:
+Voici les valeurs uniques 287
+
+Le nombre de valeur unique est 1
+
+Pour la fonction memset 6:
+Voici les valeurs uniques 287
+
+Le nombre de valeur unique est 1
+
+Pour la fonction memset 7:
+Voici les valeurs uniques 287
+
+Le nombre de valeur unique est 1
+
+Pour la fonction curve25519 with clamping correct:
+Voici les valeurs uniques 2513881
+
+Le nombre de valeur unique est 1

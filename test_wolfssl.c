@@ -22,9 +22,25 @@ byte aes_key[AES_256_KEY_SIZE] = {0};
 byte iv[AES_BLOCK_SIZE] = {0};
 
 void clamping(byte *key){
-    key[31]&=0xF8;
-    key[0]&=0x7F;
-    key[0]|=0x40;
+    key[0]&=0xF8;
+    key[31]&=0x7F;
+    key[31]|=0x40;
+}
+
+unsigned rev1(byte x) {
+   x = (x & 0x55) <<  1 | (x & 0xAA) >>  1;
+   x = (x & 0x33) <<  2 | (x & 0xCC) >>  2;
+   x = (x & 0x0F) <<  4 | (x & 0xF0) >>  4;
+   return x;
+}
+
+void reverse(byte *key){
+    byte temp; 
+    for (int i = 0; i<16;i++){
+        temp = rev1(key[i]);
+        key[i]=rev1(key[31-i]);
+        key[31-i]=temp;
+    }
 }
 
 int main(void){
@@ -40,6 +56,7 @@ int main(void){
     for (int i =0;i<nbtest;i++){
         //pseudo aleatoire in
         ret=wc_AesCbcEncrypt(&aes, in, in, sizeof(in));
+        // retourne in 
         if (ret!=0){
             for(;;){}
             };
