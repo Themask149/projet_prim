@@ -56,7 +56,7 @@ int main(void){
     for (int i =0;i<nbtest;i++){
         //pseudo aleatoire in
         ret=wc_AesCbcEncrypt(&aes, in, in, sizeof(in));
-        // retourne in 
+        reverse(in);
         if (ret!=0){
             for(;;){}
             };

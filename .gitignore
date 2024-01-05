@@ -2,5 +2,6 @@
 anraud/
 test
 core/
+./libecc/
 libecc/
 wolfssl_core/
