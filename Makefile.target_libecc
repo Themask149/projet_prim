@@ -2,7 +2,7 @@
 # PROJECT DESCRIPTION
 #
 
-TARGET = ecc_miracl
+TARGET = ecc_libecc
 
 SRCS += configure.c
 #changer sources
@@ -14,16 +14,16 @@ INCLUDES += -I./board
 # config clock 
 INCLUDES += -I./board/core_board
 # config compteur de performance + dans l'archive
-INCLUDES += -I./core/c_arm
+INCLUDES += -I./libecc/include
 # c_compiled
 
 VPATH += ./board:./core
 #d'autres chemins .c
 SRCS += ./board/startup_stm32f407xx.s 
 #a trouver dans l'archive
-SRCS += test_miracl.c
+SRCS += test_libecc.c
 
-LDFLAGS += -L./core/c_arm -l:core.a
+LDFLAGS += -L./libecc/build -l:libsign.a
 
 LINKER_SCRIPT = ./board/stm32f407.ld
 # a changer
@@ -44,7 +44,7 @@ CC = $(CROSS_COMPILE)gcc
 LD = $(CROSS_COMPILE)ld
 
 # TARGET BOARD
-CDEFS = -DSTM32F407xx
+CDEFS = -DSTM32F407xx 
 
 # SPECIFIC TO CC
 CFLAGS += $(CDEFS)

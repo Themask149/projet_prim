@@ -5,11 +5,6 @@ Voici les valeurs uniques 2513881
 
 Le nombre de valeur unique est 1
 
-Pour la fonction memset:
-Voici les valeurs uniques 2513557
-
-Le nombre de valeur unique est 1
-
 Pour la fonction fe_frombytes:
 Voici les valeurs uniques 481
 
